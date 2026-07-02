@@ -75,18 +75,21 @@
 
 <div align="center">
 
-<!-- Dark mode -->
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Rahul-Ganesan&theme=github_dark#gh-dark-mode-only" height="165" alt="stats" />
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Rahul-Ganesan&theme=github_dark#gh-dark-mode-only" height="165" alt="most used languages" />
-
-<!-- Light mode -->
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Rahul-Ganesan&theme=default#gh-light-mode-only" height="165" alt="stats" />
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Rahul-Ganesan&theme=default#gh-light-mode-only" height="165" alt="most used languages" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Rahul-Ganesan&theme=github_dark" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Rahul-Ganesan&theme=default" height="165" alt="stats" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Rahul-Ganesan&theme=github_dark" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Rahul-Ganesan&theme=default" height="165" alt="most used languages" />
+</picture>
 
 <br>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Rahul-Ganesan&hide_border=true&theme=tokyonight#gh-dark-mode-only" height="165" alt="streak" />
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Rahul-Ganesan&hide_border=true&theme=default#gh-light-mode-only" height="165" alt="streak" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=Rahul-Ganesan&hide_border=true&theme=tokyonight" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Rahul-Ganesan&hide_border=true&theme=default" height="165" alt="streak" />
+</picture>
 
 </div>
 
