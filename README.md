@@ -76,12 +76,12 @@
 <div align="center">
 
 <!-- Dark mode -->
-<img src="https://github-readme-stats.vercel.app/api?username=Rahul-Ganesan&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&theme=tokyonight#gh-dark-mode-only" height="165" alt="stats" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Rahul-Ganesan&layout=compact&hide_border=true&langs_count=8&theme=tokyonight#gh-dark-mode-only" height="165" alt="top languages" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Rahul-Ganesan&theme=github_dark#gh-dark-mode-only" height="165" alt="stats" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Rahul-Ganesan&theme=github_dark#gh-dark-mode-only" height="165" alt="most used languages" />
 
 <!-- Light mode -->
-<img src="https://github-readme-stats.vercel.app/api?username=Rahul-Ganesan&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&theme=default#gh-light-mode-only" height="165" alt="stats" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Rahul-Ganesan&layout=compact&hide_border=true&langs_count=8&theme=default#gh-light-mode-only" height="165" alt="top languages" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Rahul-Ganesan&theme=default#gh-light-mode-only" height="165" alt="stats" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Rahul-Ganesan&theme=default#gh-light-mode-only" height="165" alt="most used languages" />
 
 <br>
 
