@@ -13,8 +13,8 @@
 ### 👋 About
 
 - 🤖 AI/ML engineer shipping end-to-end LLM and data systems — agentic pipelines, RAG, GPU model serving, and eval harnesses.
-- 🧪 Recent work: **SENTINEL** (agentic trust-&-safety triage with policy-RAG citations and a CI eval gate), a **GPU LLM serving** stack with micro-batching, and a **TypeScript GitHub App** for async AI code reviews.
-- 🌱 Currently learning **Computer Vision** and **AWS**.
+- 🧪 Recent work: **SENTINEL** (agentic trust-&-safety triage with policy-RAG citations and a CI eval gate), a **LIFT - GPU LLM serving** stack with micro-batching, and a **TypeScript GitHub App** for async AI code reviews.
+- 🌱 Currently learning **Harness Engineering**.
 - 🔗 Portfolio &amp; case studies → **[rahul-ganesan.github.io](https://rahul-ganesan.github.io)**
 
 ---
