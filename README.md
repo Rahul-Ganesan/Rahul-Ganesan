@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://rahul-ganesan.github.io">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&pause=1000&color=2F81F7&center=true&vCenter=true&width=520&lines=AI%2FML+Engineer;Data+Scientist;Computer+Vision;AWS+Cloud" alt="Rahul Ganesan" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&pause=1000&color=2F81F7&center=true&vCenter=true&width=600&lines=Agentic+AI+Systems;LLM+Orchestration+%26+RAG;GPU+Model+Serving+%26+Inference;Evals+%2C+Guardrails+%26+CI+Gates;Data+Engineering+at+Scale" alt="Rahul Ganesan" />
 </a>
 
 ### Building production-grade LLM &amp; data systems — agents, RAG, model serving, and evals
