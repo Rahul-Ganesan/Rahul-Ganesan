@@ -25,7 +25,7 @@
 <div align="center">
 
 [![Merged PRs](https://img.shields.io/badge/langchain--ai%2Fopenwiki-4%20merged%20PRs-8957e5?style=for-the-badge&logo=github&logoColor=white&labelColor=1C3C3C)](https://github.com/langchain-ai/openwiki/pull/279)
-[![Open PRs](https://img.shields.io/badge/proliferate--ai%2Fproliferate-3%20in%20review-2F81F7?style=for-the-badge&logo=github&logoColor=white&labelColor=24292F)](https://github.com/proliferate-ai/proliferate/pull/1140)
+[![Open PRs](https://img.shields.io/badge/proliferate--ai%2Fproliferate-2%20in%20review-2F81F7?style=for-the-badge&logo=github&logoColor=white&labelColor=24292F)](https://github.com/proliferate-ai/proliferate/pull/1140)
 
 </div>
 
@@ -37,7 +37,6 @@
 | [**EswarDivi/MongoStreamify**](https://github.com/EswarDivi/MongoStreamify) | [Update Readme.md (#1)](https://github.com/EswarDivi/MongoStreamify/pull/1) | 🟣 **Merged** |
 | [**proliferate-ai/proliferate**](https://github.com/proliferate-ai/proliferate) | [docs(contributing): document USE_EXISTING_POSTGRES/USE_EXISTING_REDIS and Windows/WSL2 local dev (#1140)](https://github.com/proliferate-ai/proliferate/pull/1140) | 🔵 In review |
 | [**proliferate-ai/proliferate**](https://github.com/proliferate-ai/proliferate) | [chore(server): remove orphaned faux-workspace seed scripts and unused passlib dependency (#1141)](https://github.com/proliferate-ai/proliferate/pull/1141) | 🔵 In review |
-| [**AkshayaJeyaprakash/Binding_energy_minimization**](https://github.com/AkshayaJeyaprakash/Binding_energy_minimization) | [Update README.md (#1)](https://github.com/AkshayaJeyaprakash/Binding_energy_minimization/pull/1) | 🔵 In review |
 
 > Weekends go to upstream contributions — building in other people's codebases keeps the review bar honest.
 <!-- OSS:END -->
