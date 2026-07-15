@@ -1,0 +1,63 @@
+name: Update open source contributions
+
+on:
+  schedule:
+    - cron: "17 6 * * *" # daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const user = context.repo.owner;
+            // PRs I authored in repos I don't own
+            const q = `type:pr author:${user} -user:${user}`;
+            const res = await github.rest.search.issuesAndPullRequests({ q, sort: 'updated', order: 'desc', per_page: 30 });
+            const prs = res.data.items.filter(i => !(i.state === 'closed' && !i.pull_request.merged_at));
+            const merged = prs.filter(i => i.pull_request.merged_at);
+            const open = prs.filter(i => !i.pull_request.merged_at);
+
+            const repoOf = i => i.repository_url.replace('https://api.github.com/repos/', '');
+            const row = i => {
+              const repo = repoOf(i);
+              const status = i.pull_request.merged_at ? '🟣 **Merged**' : '🔵 In review';
+              return `| [**${repo}**](https://github.com/${repo}) | [${i.title} (#${i.number})](${i.html_url}) | ${status} |`;
+            };
+
+            const enc = s => encodeURIComponent(s).replace(/-/g, '--');
+            const badges = [];
+            if (merged.length) badges.push(`[![Merged PRs](https://img.shields.io/badge/${enc(repoOf(merged[0]))}-${merged.length}%20merged%20PR${merged.length > 1 ? 's' : ''}-8957e5?style=for-the-badge&logo=github&logoColor=white&labelColor=1C3C3C)](${merged[0].html_url})`);
+            if (open.length) badges.push(`[![Open PRs](https://img.shields.io/badge/${enc(repoOf(open[0]))}-${open.length}%20in%20review-2F81F7?style=for-the-badge&logo=github&logoColor=white&labelColor=24292F)](${open[0].html_url})`);
+
+            const body = prs.length === 0 ? '_No external PRs yet._' : [
+              '<div align="center">', '', badges.join('\n'), '', '</div>', '',
+              '| Project | Pull Request | Status |',
+              '|---------|--------------|--------|',
+              ...[...merged, ...open].slice(0, 10).map(row), '',
+              '> Weekends go to upstream contributions — building in other people\'s codebases keeps the review bar honest.'
+            ].join('\n');
+
+            const readme = fs.readFileSync('README.md', 'utf8');
+            const out = readme.replace(/<!-- OSS:START -->[\s\S]*<!-- OSS:END -->/,
+              `<!-- OSS:START -->\n${body}\n<!-- OSS:END -->`);
+            if (out !== readme) {
+              fs.writeFileSync('README.md', out);
+              core.setOutput('changed', 'true');
+            }
+      - name: Commit
+        run: |
+          if ! git diff --quiet README.md; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "chore: refresh open source contributions"
+            git push
+          fi
