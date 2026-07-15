@@ -21,7 +21,13 @@ jobs:
             // PRs I authored in repos I don't own
             const q = `type:pr author:${user} -user:${user}`;
             const res = await github.rest.search.issuesAndPullRequests({ q, sort: 'updated', order: 'desc', per_page: 30 });
-            const prs = res.data.items.filter(i => !(i.state === 'closed' && !i.pull_request.merged_at));
+            // repos to never show, exact "owner/repo" match
+            const EXCLUDE = new Set([
+              'AkshayaJeyaprakash/Binding_energy_minimization',
+            ]);
+            const prs = res.data.items.filter(i =>
+              !(i.state === 'closed' && !i.pull_request.merged_at) &&
+              !EXCLUDE.has(i.repository_url.replace('https://api.github.com/repos/', '')));
             const merged = prs.filter(i => i.pull_request.merged_at);
             const open = prs.filter(i => !i.pull_request.merged_at);
 
